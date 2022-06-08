@@ -62,7 +62,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -87,18 +87,18 @@ static const char *termcmd[]  = { "tabbed", "-cr2", "st", "-w", "''", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,					              XK_m,      spawn,          {.v = mpcnext } },
-	{ MODKEY|ShiftMask,					    XK_m,      spawn,          {.v = mpcprev } },
-	{ MODKEY|ShiftMask,					    XK_p,      spawn,          {.v = mpctoggle } },
-	{ MODKEY,					              XK_s,      spawn,          {.v = scrotcmd } },
-	{ MODKEY|ShiftMask,					    XK_s,      spawn,          {.v = scrot2cmd } },
-	{ MODKEY,					              XK_o,      spawn,          {.v = surfcmd } },
-	{ MODKEY|ShiftMask,					    XK_o,      spawn,          {.v = firecmd } },
-	{ MODKEY|ShiftMask,             XK_l, 		 spawn,          {.v = slockcmd } },
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+  { MODKEY,					              XK_m,      spawn,          {.v = mpcnext } },
+  { MODKEY|ShiftMask,					    XK_m,      spawn,          {.v = mpcprev } },
+  { MODKEY|ShiftMask,					    XK_p,      spawn,          {.v = mpctoggle } },
+  { MODKEY,					              XK_s,      spawn,          {.v = scrotcmd } },
+  { MODKEY|ShiftMask,					    XK_s,      spawn,          {.v = scrot2cmd } },
+  { MODKEY,					              XK_o,      spawn,          {.v = surfcmd } },
+  { MODKEY|ShiftMask,					    XK_o,      spawn,          {.v = firecmd } },
+  { MODKEY|ShiftMask,             XK_l, 		 spawn,          {.v = slockcmd } },
+  { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+  { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+  { MODKEY,                       XK_b,      togglebar,      {0} },
+  { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = -1 } },
