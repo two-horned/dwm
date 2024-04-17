@@ -37,15 +37,15 @@ dist: clean
 	rm -rf dwm-${VERSION}
 
 install: all
-	mkdir -p $(BINPREFIX)
-	cp -f dwm $(BINPREFIX)
-	chmod 700 $(BINPREFIX)/dwm
-	mkdir -p $(MANPREFIX)/man1
-	sed "s/VERSION/${VERSION}/g" < dwm.1 > $(MANPREFIX)/man1/dwm.1
-	chmod 600 $(MANPREFIX)/man1/dwm.1
+	mkdir -p ${DESTDIR}${PREFIX}/bin
+	cp -f dwm ${DESTDIR}${PREFIX}/bin
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
+	mkdir -p ${DESTDIR}${MANPREFIX}/man1
+	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
+	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 
 uninstall:
-	rm -f $(BINPREFIX)/dwm\
-		$(MANPREFIX)/man1/dwm.1
+	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
+		${DESTDIR}${MANPREFIX}/man1/dwm.1
 
 .PHONY: all options clean dist install uninstall

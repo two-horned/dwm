@@ -1,5 +1,3 @@
-static void deck(Monitor *m);
-
 void
 deck(Monitor *m) {
 	unsigned int i, n, h, mw, my, ns;
@@ -32,4 +30,3 @@ deck(Monitor *m) {
 		else
 			resize(c, m->wx + mw + m->gappx/ns, m->wy + m->gappx, m->ww - mw - (2*c->bw) - m->gappx*(5-ns)/2, m->wh - (2*c->bw) - 2*m->gappx, False);
 }
-

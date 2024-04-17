@@ -1,7 +1,3 @@
-
-static void centeredmaster(Monitor *m);
-static void centeredfloatingmaster(Monitor *m);
-
 void
 centeredmaster(Monitor *m)
 {
